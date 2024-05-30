@@ -22,6 +22,7 @@ public class GptConfig {
     private Double temperature;
     private List<String> basicPrompt;
     private List<String> apiKey;
+    private String difyApikey;
     private Long ofSeconds;
     private String imageQuality;
     private String imageStyle;

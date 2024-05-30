@@ -1,16 +1,19 @@
+  # -*- coding: utf-8 -*-
+
 proxy:
   #  代理配置
   #  国内墙了gpt的api，所以得用代理，一般你使用的代理软件会有相关信息，例子：
-  #  host: 127.0.0.1
-  #  port: 7890
+    host: 127.0.0.1
+    port: 7890
   #  若不需要留空即可
-  host:
-  port:
+#  host:
+#  port:
 
 gpt:
   # 如果你使用了第三方GPT 请修改baseUrl
   # (OPENAI官方地址 https://api.openai.com/)
-  baseUrl: https://api.openai.com/
+  baseUrl: https://api.openai.com/v1/
+#  baseUrl: https://api.chatgptid.net/v1/
   # 使用的 chat 模型 如gpt-3.5-turbo/gpt-4 (https://platform.openai.com/docs/models/models)
   model: gpt-3.5-turbo
   # 最大token限制 越多的token意味着越多的花费(gpt-3.5-turbo上限为4096token, gpt-4则为8192)
@@ -24,8 +27,12 @@ gpt:
     - "用中文回答我的问题"
   #  openai的apikey
   #  支持多个key（虽然有判空，但仍然建议有多少个写多少个，别留空👨‍🔧）
-  apiKey:
-    -
+#  apiKey: sk-GpgvuJbkYj4yYFqtF18fBb4458A847F1902d44DcDeB241F6
+#  apiKey: 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
+  apiKey: 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
+  #  difyApikey: app-sqwhMPpvferR477H8Ne8zhiH
+  difyApikey: app-UGodbwWY6v0ZCCzrxZN5Ek6w
+#    -
   # ai画图
   # 图片质量 standard 或 hd
   imageQuality: standard
@@ -40,9 +47,9 @@ gpt:
   audioSpeed: 1.0
 qq:
   #  是否使用qq true/false
-  enable: true
+  enable: false
   #  qq账号
-  account:
+  account: 1159749673
   #  是否自动同意好友申请
   acceptNewFriend: false
   #  是否自动同意被邀请入群
@@ -50,7 +57,7 @@ qq:
 
 wechat:
   #  是否使用微信 true/false
-  enable: false
+  enable: true
   #  生成的登录二维码路径 默认与项目同级
   qrPath: "./"
 

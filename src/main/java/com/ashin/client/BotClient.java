@@ -35,13 +35,15 @@ public class BotClient {
     private KeywordConfig keywordConfig;
     @Resource
     private BotUtil botUtil;
+    @Resource
+    private DifyClient difyClient;
 
     @PostConstruct
     public void init() {
         //微信
         if (wechatConfig.getEnable()){
             log.info("正在登录微信,请按提示操作：");
-            wechatBot = new Wechat(new WechatMessageHandler(interactService, keywordConfig, botUtil), wechatConfig.getQrPath());
+            wechatBot = new Wechat(new WechatMessageHandler(interactService, keywordConfig, botUtil, difyClient), wechatConfig.getQrPath());
             wechatBot.start();
         }
         if (qqConfig.getEnable()) {
