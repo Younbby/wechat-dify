@@ -75,7 +75,7 @@ public class DifyClient {
 
         HttpResponse res = HttpRequest.post(url)
                 .header(Header.AUTHORIZATION, String.format("Bearer %s", gptConfig.getDifyApikey()))
-//                .header(Header.AUTHORIZATION, "Bearer app-sqwhMPpvferR477H8Ne8zhiH")
+//                .header(Header.AUTHORIZATION, "Bearer app-")
                 .header(Header.CONTENT_TYPE, "application/json")
                 .body(JSONUtil.toJsonStr(paramMap))
                 .execute();

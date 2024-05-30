@@ -77,16 +77,6 @@ public class WechatMessageHandler implements IMsgHandlerFace {
             } else if (content.startsWith(keywordConfig.getAudio())) {
                 return "微信暂不支持语音回复";
             } else {
-//                chatBO.setPrompt(content);
-//                chatBO.setChatType(ChatType.TEXT);
-
-
-//                 Create an instance of a model
-//                ChatLanguageModel model = OpenAiChatModel.withApiKey("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");
-//                return model.generate(content);
-
-                // 调用dify提供的接口
-//                return postDify(content);
                 return difyClient.getFromDify(userName, content);
             }
             return interactService.chat(chatBO).getStringResult();

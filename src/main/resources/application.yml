@@ -27,11 +27,9 @@ gpt:
     - "用中文回答我的问题"
   #  openai的apikey
   #  支持多个key（虽然有判空，但仍然建议有多少个写多少个，别留空👨‍🔧）
-#  apiKey: sk-GpgvuJbkYj4yYFqtF18fBb4458A847F1902d44DcDeB241F6
-#  apiKey: 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
-  apiKey: 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
-  #  difyApikey: app-sqwhMPpvferR477H8Ne8zhiH
-  difyApikey: app-UGodbwWY6v0ZCCzrxZN5Ek6w
+  apiKey:
+  #  difyApikey: app-
+  difyApikey: app-
 #    -
   # ai画图
   # 图片质量 standard 或 hd
